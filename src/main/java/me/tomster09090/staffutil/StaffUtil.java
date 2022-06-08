@@ -19,6 +19,7 @@ import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.event.Listener;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.security.auth.login.LoginException;
@@ -43,7 +44,7 @@ public final class StaffUtil extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        //startBot();
+        startBot();
         createCustomConfig();
         getConfig().options().copyDefaults();
         saveDefaultConfig();
@@ -57,7 +58,9 @@ public final class StaffUtil extends JavaPlugin {
         Objects.requireNonNull(getCommand("sc")).setExecutor(new staffChatCommand(this));
         getCommand("sreload").setExecutor(new reloadCommand(this));
         getCommand("mc").setExecutor(new managementChatCommand(this));
-        Bukkit.getPluginManager().registerEvents((Listener)new asyncPlayerChatEvent(this), this);    }
+        Bukkit.getPluginManager().registerEvents((Listener)new asyncPlayerChatEvent(this), this);
+        Bukkit.getServer().getLogger().severe("[EXPLORERVILLE STAFFUTILS] SUCCESSFULLY STARTED");
+    }
 
     @Override
     public void onDisable() {
@@ -65,6 +68,7 @@ public final class StaffUtil extends JavaPlugin {
         this.file = null;
         this.dir = null;
         if (jda != null) jda.shutdownNow();
+        Bukkit.getServer().getLogger().severe("[EXPLORERVILLE STAFFUTILS] SUCCESSFULLY STOPPED");
     }
 
 
@@ -106,7 +110,7 @@ public final class StaffUtil extends JavaPlugin {
         try {
             jda = builder.build();
         }catch (LoginException e){
-            System.out.println("You fucking idiot Tom you fucking broke it now go fix it you stupid cunt.");
+            e.printStackTrace();
         }
     }
 
