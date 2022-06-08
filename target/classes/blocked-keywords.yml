@@ -1,0 +1,71 @@
+blocker-message: '&cHey! &7We cant allow you to say that word &a%player%!'
+blocker-staff-message: '&cPlayer &a%player% &ctried to say a blocked word &8&cMessage&7: &8%message%'
+write-to-log: true
+blocked-keywords:
+  - www.
+  - https://
+  - http://
+  - fuck
+  - hitler
+  - gay
+  - fag
+  - dickhead
+  - fucker
+  - shit
+  - pussy
+  - bellend
+  - cock
+  - nonce
+  - bullshit
+  - cunt
+  - dick
+  - fanny
+  - effing
+  - feck
+  - flaps
+  - knob
+  - minge
+  - minger
+  - motherfucker
+  - munter
+  - prick
+  - twat
+  - dildo
+  - cocksucker
+  - jizz
+  - rapey
+  - slag
+  - slapper
+  - wanker
+  - groom
+  - whore
+  - skank
+  - bj
+  - rapist
+  - bender
+  - faggot
+  - homo
+  - spastic
+  - vegetable
+  - chinky
+  - retard
+  - coon
+  - nazi
+  - paki
+  - pikey
+  - Bud Bud*
+  - Chinaman
+  - Coconut
+  - Coloured
+  - Curry Muncher
+  - Honky
+  - Jap
+  - Kraut
+  - Monkey
+  - Paddy
+  - Sheep Shagger
+  - Slope
+  - Tinker
+  - nigger
+  - nigga
+

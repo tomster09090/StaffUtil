@@ -1,0 +1,42 @@
+name: StaffUtil
+version: '1.0'
+main: me.tomster09090.staffutil.StaffUtil
+api-version: 1.18
+authors: [ tomster09090 ]
+description: Staff Utilities - Options such as staff chats, chat cooldown, clearchat and much more!
+commands:
+  sc:
+    aliases:
+      - staffchat
+  sreload:
+    description: reloads the StaffUtils Config.
+  mc:
+    aliases:
+      - managementchat
+    description: Chat for management members.
+  cf:
+    aliases:
+      - chatfilter
+    description: Chat Filter Command.
+    permission: staff.cf.command
+  rsp:
+    aliases:
+      - resourcepack
+      - rpack
+  clearchat:
+    aliases:
+      - cc
+      - clearc
+      - cchat
+    description: Clears the chat for all players online. Very useful staff moderation tool!
+    permission: staff.cc
+permissions:
+  cf:
+    description: Permission node for the ChatFilter array of commands.
+    default: op
+    children:
+      staff.cf.*:
+        children:
+          staff.cf.command: true
+          staff.cf.bypass: true
+

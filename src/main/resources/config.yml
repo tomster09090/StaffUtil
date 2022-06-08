@@ -1,0 +1,36 @@
+#----- CONFIGURATION FILE FOR STAFF UTILITIES -----#
+#----- CREATED BY TOMSTER09090 -----#
+#----- ANY ISSUES CONTACT ME ON DISCORD: tomster#7341-----#
+
+#----- CLEAR CHAT -----#
+number-of-lines-to-clear: 50
+
+
+#----- STAFF CHAT -----#
+staff-chat-enabled: true
+staff-chat-prefix-format: "&d[&5STAFF CHAT&d]&5 %name% &d↠"
+
+#----- MANAGEMENT CHAT -----#
+management-chat-enabled: true
+management-chat-prefix-format: "&d[&5MANAGEMENT CHAT&d]&5 %name% &d↠"
+
+#----- CHAT COOLDOWN -----#
+
+time-in-seconds: 5
+cooldown-message: "&cHey %player%! You're talking too fast! Please wait %seconds% before you can chat again."
+
+#----- RESOURCE PACK -----#
+#Set this option to false if you would like to allow your players to join your server without a resource pack.
+force-resource-pack: true
+#If set to true, this is where you should put your server resource pack for the plugin to attempt to download client-side.
+resource-pack-link: "https://www.dropbox.com/s/ci51kgk52kpq2zc/PROJECT%20RETRO.zip?dl=1"
+
+#----- DISCORD MINECRAFT CHAT INTEGRATION -----#
+
+#Here is where you put your Discord Bot Token, as well as what you'd like the Activity status to say!
+bot-token: "OTU2NjM3ODk0MzUxNjU0OTQy.YjzIdw.gfJUdW4XkY8E1bWIwCtyvSrj21c"
+bot-activity: "Have a roarsome day!"
+
+#This is where you put the server-id, and the channel name (For the bot to send the messages into)
+guild-id: "858345751738449920"
+text-channel-name: "minecraft-discord-intergration"
