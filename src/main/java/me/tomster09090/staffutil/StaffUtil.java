@@ -95,7 +95,7 @@ public final class StaffUtil extends JavaPlugin {
                 } catch (IOException iOException) {}
         }
     }
-    /*public void startBot(){
+    public void startBot(){
 
         //GRABS BOT TOKEN FROM CONFIG.YML
         JDABuilder builder = JDABuilder.createDefault(this.getConfig().getString("bot-token"));
@@ -112,5 +112,4 @@ public final class StaffUtil extends JavaPlugin {
 
     public JDA getJda() { return jda; }
 
-     */
 }
