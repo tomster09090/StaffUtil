@@ -26,11 +26,8 @@ public class asyncChatCooldownListener implements Listener {
     public void onPlayerChat(AsyncPlayerChatEvent e) {
         Player player = e.getPlayer();
 
-
-        player.sendMessage("Event Fired.");
         if (cooldown.containsKey(player.getUniqueId())) {
             if (System.currentTimeMillis() < cooldown.get(player.getUniqueId())) {
-                player.sendMessage("Cooldown Active.");
                 //Cooldown still active
                 e.setCancelled(true);
 
@@ -49,11 +46,10 @@ public class asyncChatCooldownListener implements Listener {
         }
 
         long now = System.currentTimeMillis();
-        long cooldownTime = main.getConfig().getInt("time-in-seconds") * 1000;
+        long cooldownTime = main.getConfig().getInt("time-in-seconds") * 1000L;
         long nowPlusCooldown = now + cooldownTime;
 
         cooldown.put(player.getUniqueId(), nowPlusCooldown);
-        player.sendMessage("Cooldown fired.");
     }
 
     @EventHandler
