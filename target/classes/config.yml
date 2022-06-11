@@ -23,14 +23,14 @@ cooldown-message: "&cHey %player%! You're talking too fast! Please wait %seconds
 #Set this option to false if you would like to allow your players to join your server without a resource pack.
 force-resource-pack: true
 #If set to true, this is where you should put your server resource pack for the plugin to attempt to download client-side.
-resource-pack-link: "https://www.dropbox.com/s/ci51kgk52kpq2zc/PROJECT%20RETRO.zip?dl=1"
+resource-pack-link: "RESOURCE-PACK"
 
 #----- DISCORD MINECRAFT CHAT INTEGRATION -----#
 
 #Here is where you put your Discord Bot Token, as well as what you'd like the Activity status to say!
-bot-token: "OTU2NjM3ODk0MzUxNjU0OTQy.YjzIdw.gfJUdW4XkY8E1bWIwCtyvSrj21c"
-bot-activity: "Have a roarsome day!"
+bot-token: "BOT TOKEN"
+bot-activity: "BOT STATUS"
 
 #This is where you put the server-id, and the channel name (For the bot to send the messages into)
-guild-id: "858345751738449920"
-text-channel-name: "minecraft-discord-intergration"
+guild-id: "GUILD ID"
+text-channel-name: "CHANNEL-NAME"
