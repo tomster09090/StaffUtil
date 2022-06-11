@@ -5,7 +5,6 @@
 #----- CLEAR CHAT -----#
 number-of-lines-to-clear: 50
 
-
 #----- STAFF CHAT -----#
 staff-chat-enabled: true
 staff-chat-prefix-format: "&d[&5STAFF CHAT&d]&5 %name% &d↠"
@@ -34,3 +33,4 @@ bot-activity: "BOT STATUS"
 #This is where you put the server-id, and the channel name (For the bot to send the messages into)
 guild-id: "GUILD ID"
 text-channel-name: "CHANNEL-NAME"
+discord-chat-to-minecraft: false
