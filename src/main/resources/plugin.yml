@@ -30,6 +30,9 @@ commands:
       - cchat
     description: Clears the chat for all players online. Very useful staff moderation tool!
     permission: staff.cc
+  report:
+    description: Gives you the ability to report another player.
+    permission: staff.report
 permissions:
   cf:
     description: Permission node for the ChatFilter array of commands.
