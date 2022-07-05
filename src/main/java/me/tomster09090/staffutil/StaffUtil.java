@@ -5,6 +5,7 @@ import me.tomster09090.staffutil.commands.chatfunctions.chatfilter.asyncPlayerCh
 import me.tomster09090.staffutil.commands.chatfunctions.chatfilter.chatFilterCommand;
 import me.tomster09090.staffutil.commands.chatfunctions.clearChat;
 import me.tomster09090.staffutil.commands.chatfunctions.managementChatCommand;
+import me.tomster09090.staffutil.commands.chatfunctions.reportPlayer;
 import me.tomster09090.staffutil.commands.reloadCommand;
 import me.tomster09090.staffutil.commands.rsp.onPackLoad;
 import me.tomster09090.staffutil.commands.rsp.resourcePackCommand;
@@ -57,6 +58,7 @@ public final class StaffUtil extends JavaPlugin {
         getCommand("cf").setExecutor(new chatFilterCommand(this));
         Objects.requireNonNull(getCommand("sc")).setExecutor(new staffChatCommand(this));
         getCommand("sreload").setExecutor(new reloadCommand(this));
+        getCommand("report").setExecutor(new reportPlayer() );
         getCommand("mc").setExecutor(new managementChatCommand(this));
         Bukkit.getPluginManager().registerEvents((Listener)new asyncPlayerChatEvent(this), this);
         Bukkit.getServer().getLogger().severe("[EXPLORERVILLE STAFFUTILS] SUCCESSFULLY STARTED");
@@ -115,5 +117,4 @@ public final class StaffUtil extends JavaPlugin {
     }
 
     public JDA getJda() { return jda; }
-
 }
