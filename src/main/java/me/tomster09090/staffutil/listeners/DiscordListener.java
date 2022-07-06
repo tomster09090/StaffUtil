@@ -2,6 +2,7 @@ package me.tomster09090.staffutil.listeners;
 
 import me.tomster09090.staffutil.StaffUtil;
 import me.tomster09090.staffutil.util.CC;
+import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.bukkit.Bukkit;
@@ -47,11 +48,11 @@ public class DiscordListener extends ListenerAdapter implements Listener {
                         }
                     }
                 }
-            }catch (Exception exception){
+            } catch (Exception exception) {
                 exception.printStackTrace();
             }
         }
-        //TextChannel textChannel = main.getJda().getTextChannelsByName(main.getConfig().getString("text-channel-name"), true).get(0);
-        //textChannel.sendMessage("**[MINECRAFT] " + e.getPlayer().getName() + ":** " + message).queue();
+            TextChannel textChannel = main.getJda().getTextChannelsByName(main.getConfig().getString("text-channel-name"), true).get(0);
+            textChannel.sendMessage("**[MINECRAFT] " + e.getPlayer().getName() + ":** " + message).queue();
+        }
     }
-}
