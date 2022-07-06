@@ -35,8 +35,8 @@ public class reportPlayer implements CommandExecutor {
                             if (player.hasPermission("staff.report.read")){
                                 player.sendMessage(CC.RED + "Player " + CC.GREEN + player.getName() + CC.RED + " Has reported player "
                                         + CC.GREEN + target.getName() + CC.RED +  " for the reason of " + CC.GREEN + builder);
-                                player.sendMessage(CC.GREEN + "Your report has been placed.");
                             }
+                            player.sendMessage(CC.GREEN + "Your report has been placed.");
                         }
                     }
                 }else {
