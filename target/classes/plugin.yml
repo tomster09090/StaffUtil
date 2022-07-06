@@ -1,5 +1,5 @@
 name: StaffUtil
-version: '1.0-TESTING'
+version: '1.0.1'
 main: me.tomster09090.staffutil.StaffUtil
 api-version: 1.18
 authors: [ tomster09090 ]
@@ -8,6 +8,7 @@ commands:
   sc:
     aliases:
       - staffchat
+    permission: staff.sc
   sreload:
     description: reloads the StaffUtils Config.
   mc:
@@ -34,12 +35,20 @@ commands:
     description: Gives you the ability to report another player.
     permission: staff.report
 permissions:
-  cf:
-    description: Permission node for the ChatFilter array of commands.
-    default: op
+  staff.*:
     children:
-      staff.cf.*:
-        children:
-          staff.cf.command: true
-          staff.cf.bypass: true
+      staff.sc: true
+      staff.mc: true
+      staff.cf.command: true
+      staff.cf.bypass: true
+      staff.cf.blocked-word: true
+      staff.cc: true
+      staff.cc.bypass: true
+      staff.report: true
+      staff.report.read: true
+      staff.reload: true
+      staff.cooldown.bypass: true
+    description: Permission node for all array of commands within the plugin.
+    default: op
+
 
