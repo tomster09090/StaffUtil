@@ -6,7 +6,7 @@
 
     <groupId>me.tomster09090</groupId>
     <artifactId>StaffUtil</artifactId>
-    <version>1.0-TESTING</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>StaffUtil</name>
