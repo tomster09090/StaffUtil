@@ -104,16 +104,17 @@ public final class StaffUtil extends JavaPlugin {
     public void startBot(){
 
         //GRABS BOT TOKEN FROM CONFIG.YML
-        JDABuilder builder = JDABuilder.createDefault(this.getConfig().getString("bot-token"));
-        builder.setActivity(Activity.playing(getConfig().getString("bot-activity")));
-        builder.setStatus(OnlineStatus.DO_NOT_DISTURB);
-        builder.addEventListeners(new DiscordListener(this));
-
-        try {
-            jda = builder.build();
-        }catch (LoginException e){
-            e.printStackTrace();
-        }
+        try{
+            JDABuilder builder = JDABuilder.createDefault(this.getConfig().getString("bot-token"));
+            builder.setActivity(Activity.playing(getConfig().getString("bot-activity")));
+            builder.setStatus(OnlineStatus.DO_NOT_DISTURB);
+            builder.addEventListeners(new DiscordListener(this));
+            try {
+                jda = builder.build();
+            }catch (LoginException e){
+                e.printStackTrace();
+            }
+        }catch (Exception e){}
     }
 
     public JDA getJda() { return jda; }
