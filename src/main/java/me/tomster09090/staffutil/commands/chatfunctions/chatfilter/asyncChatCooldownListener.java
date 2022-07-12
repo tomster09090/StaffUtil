@@ -39,7 +39,7 @@ public class asyncChatCooldownListener implements Listener {
 
                     String message = CC.translate(main.getConfig().getString("cooldown-message"));
                     String message1 = CC.replaceall(message, "%player%", player.getName());
-                    String finalMessage = CC.replaceall(message1, "%cooldown%", String.valueOf(differenceInSeconds));
+                    String finalMessage = CC.replaceall(message1, "%seconds%", String.valueOf(differenceInSeconds));
                     player.sendMessage(finalMessage);
                     return;
                 }
