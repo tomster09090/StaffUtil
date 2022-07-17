@@ -48,11 +48,11 @@ public class asyncPlayerChatEvent implements Listener {
                 }
                 for (Player players : Bukkit.getOnlinePlayers()) {
                     e.setCancelled(true);
-                    player.sendMessage(CC.translate(playerMessage).replaceAll("%player%", player.getName()));
                     if (players.hasPermission("staff.cf.blocked-word")) {
                         players.sendMessage(CC.translate(staffMessage).replaceAll("%message%", whatWasSaid).replaceAll("%player%", player.getName()));
                     }
                 }
+                player.sendMessage(CC.translate(playerMessage).replaceAll("%player%", player.getName()));
             }
         }
     }
