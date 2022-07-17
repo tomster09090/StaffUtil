@@ -33,9 +33,8 @@ public class asyncPlayerChatEvent implements Listener {
         String staffMessage = main.getCustomConfig().getString("blocker-staff-message");
         String playerMessage = main.getCustomConfig().getString("blocker-message");
         String whatWasSaid = e.getMessage();
-        String removeSpace = whatWasSaid.replace("\\s+", "");
+        String removeSpace = whatWasSaid.replace("\\s", "");
         String message = removeSpace.toLowerCase();
-        String[] words = whatWasSaid.split(" ");
         List<String> blockedWords = main.getCustomConfig().getStringList("blocked-keywords");
         for (String word : blockedWords) {
             if (message.contains(word)) {
