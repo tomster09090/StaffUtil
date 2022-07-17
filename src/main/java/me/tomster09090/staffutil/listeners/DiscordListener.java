@@ -52,7 +52,9 @@ public class DiscordListener extends ListenerAdapter implements Listener {
                 exception.printStackTrace();
             }
         }
+        if (main.getConfig().getBoolean("bot-enabled")) {
             TextChannel textChannel = main.getJda().getTextChannelsByName(main.getConfig().getString("text-channel-name"), true).get(0);
             textChannel.sendMessage("**[MINECRAFT] " + e.getPlayer().getName() + ":** " + message).queue();
         }
     }
+}

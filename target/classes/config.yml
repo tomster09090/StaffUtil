@@ -25,6 +25,8 @@ force-resource-pack: true
 resource-pack-link: "RESOURCE-PACK"
 
 #----- DISCORD MINECRAFT CHAT INTEGRATION -----#
+#Here is where you will choose whether you'd like the bot enabled, or disabled.
+bot-enabled: false
 
 #Here is where you put your Discord Bot Token, as well as what you'd like the Activity status to say!
 bot-token: "BOT TOKEN"
