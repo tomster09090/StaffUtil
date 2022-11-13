@@ -31,7 +31,7 @@ public class managementChatCommand implements CommandExecutor {
                     }
                 }
             }else{
-                sender.sendMessage(CC.translate("&cHey there " + sender.getName() + "!" + "&cYou cannot perform this command!"));
+                sender.sendMessage(CC.translate("&cHey there " + sender.getName() + "! " + "&cYou cannot perform this command!"));
             }
          return false;
     }
