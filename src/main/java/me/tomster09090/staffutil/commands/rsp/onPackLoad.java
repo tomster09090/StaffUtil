@@ -25,7 +25,7 @@ public class onPackLoad implements Listener {
     if (e.getStatus().equals(PlayerResourcePackStatusEvent.Status.DECLINED)) {
         player.kickPlayer(CC.RED + "You have to enable the resource pack.");
     } else if (e.getStatus().equals(PlayerResourcePackStatusEvent.Status.FAILED_DOWNLOAD)) {
-        player.kickPlayer(CC.RED + "The resource pack failed to download - please try again.");
+        player.kickPlayer(CC.RED + "The resource pack failed to download - please try again or contact a staff member.");
     }
 }
     }
@@ -40,8 +40,10 @@ public class onPackLoad implements Listener {
                 System.out.println("An Error has occourred. Please defer to console for more infomation.");
                 ex.printStackTrace();
             }
-        }else{
-            Bukkit.getServer().getLogger().severe("[STAFFUTILS] RESOURCE PACK IS DISABLED FULLY IN CONFIG - THEREFORE THE PLUGIN WILL NOT ATTEMPT TO USE IT");
+        }else {
+            if (main.getConfig().getBoolean("console-notify-on-fail")) {
+                Bukkit.getServer().getLogger().severe("[STAFFUTILS] RESOURCE PACK IS DISABLED FULLY IN CONFIG - THEREFORE THE PLUGIN WILL NOT ATTEMPT TO USE IT");
+            }
         }
     }
 }

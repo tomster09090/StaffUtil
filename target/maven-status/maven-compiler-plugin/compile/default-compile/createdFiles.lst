@@ -1,6 +1,7 @@
 me\tomster09090\staffutil\StaffUtil.class
 me\tomster09090\staffutil\commands\chatfunctions\managementChatCommand.class
 me\tomster09090\staffutil\util\CC.class
+me\tomster09090\staffutil\commands\chatfunctions\reportPlayer.class
 me\tomster09090\staffutil\commands\reloadCommand.class
 me\tomster09090\staffutil\commands\chatfunctions\chatfilter\chatFilterCommand.class
 me\tomster09090\staffutil\listeners\DiscordListener.class

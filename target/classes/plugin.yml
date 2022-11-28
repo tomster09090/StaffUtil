@@ -1,5 +1,5 @@
 name: StaffUtil
-version: '1.0.1'
+version: '1.0.4'
 main: me.tomster09090.staffutil.StaffUtil
 api-version: 1.18
 authors: [ tomster09090 ]
