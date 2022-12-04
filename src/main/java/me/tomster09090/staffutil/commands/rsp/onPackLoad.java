@@ -42,7 +42,8 @@ public class onPackLoad implements Listener {
             }
         }else {
             if (main.getConfig().getBoolean("console-notify-on-fail")) {
-                Bukkit.getServer().getLogger().severe("[STAFFUTILS] RESOURCE PACK IS DISABLED FULLY IN CONFIG - THEREFORE THE PLUGIN WILL NOT ATTEMPT TO USE IT");
+                //Bukkit.getServer().getLogger().severe("[STAFFUTILS] RESOURCE PACK IS DISABLED FULLY IN CONFIG - THEREFORE THE PLUGIN WILL NOT ATTEMPT TO USE IT");
+                //Commented out on fail logger - as due requests.
             }
         }
     }
