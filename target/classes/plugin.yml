@@ -34,6 +34,11 @@ commands:
   report:
     description: Gives you the ability to report another player.
     permission: staff.report
+  nightvision:
+    aliases:
+      - nv
+    description: Gives the user night vision.
+    permission: staff.nv
 permissions:
   staff.*:
     children:
@@ -48,6 +53,7 @@ permissions:
       staff.report.read: true
       staff.reload: true
       staff.cooldown.bypass: true
+      staff.nv: true
     description: Permission node for all array of commands within the plugin.
     default: op
 

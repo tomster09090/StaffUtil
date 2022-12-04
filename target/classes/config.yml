@@ -21,6 +21,7 @@ cooldown-message: "&cHey %player%! You're talking too fast! Please wait %seconds
 #----- RESOURCE PACK -----#
 #Set this option to false if you would like to allow your players to join your server without a resource pack.
 force-resource-pack: true
+console-notify-on-fail: false
 #If set to true, this is where you should put your server resource pack for the plugin to attempt to download client-side.
 resource-pack-link: "RESOURCE-PACK"
 

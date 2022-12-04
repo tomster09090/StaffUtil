@@ -6,6 +6,7 @@ import me.tomster09090.staffutil.commands.chatfunctions.chatfilter.chatFilterCom
 import me.tomster09090.staffutil.commands.chatfunctions.clearChat;
 import me.tomster09090.staffutil.commands.chatfunctions.managementChatCommand;
 import me.tomster09090.staffutil.commands.chatfunctions.reportPlayer;
+import me.tomster09090.staffutil.commands.nvCommand;
 import me.tomster09090.staffutil.commands.reloadCommand;
 import me.tomster09090.staffutil.commands.rsp.onPackLoad;
 import me.tomster09090.staffutil.commands.rsp.resourcePackCommand;
@@ -52,6 +53,7 @@ public final class StaffUtil extends JavaPlugin {
         logger();
         getCommand("clearchat").setExecutor(new clearChat(this));
         getCommand("rsp").setExecutor(new resourcePackCommand(this));
+        getCommand("nightvision").setExecutor(new nvCommand());
         Bukkit.getPluginManager().registerEvents(new onPackLoad(this), this);
         Bukkit.getPluginManager().registerEvents(new DiscordListener(this), this);
         Bukkit.getPluginManager().registerEvents(new asyncChatCooldownListener(this), this);

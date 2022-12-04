@@ -1,4 +1,5 @@
 me\tomster09090\staffutil\StaffUtil.class
+me\tomster09090\staffutil\commands\nvCommand.class
 me\tomster09090\staffutil\commands\chatfunctions\managementChatCommand.class
 me\tomster09090\staffutil\util\CC.class
 me\tomster09090\staffutil\commands\chatfunctions\reportPlayer.class
