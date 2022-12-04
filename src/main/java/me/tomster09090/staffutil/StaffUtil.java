@@ -63,7 +63,7 @@ public final class StaffUtil extends JavaPlugin {
         getCommand("report").setExecutor(new reportPlayer() );
         getCommand("mc").setExecutor(new managementChatCommand(this));
         Bukkit.getPluginManager().registerEvents((Listener)new asyncPlayerChatEvent(this), this);
-        Bukkit.getServer().getLogger().severe("[STAFFUTILS] SUCCESSFULLY STARTED");
+        Bukkit.getServer().getLogger().info("[SeaCraft STAFFUTILS] SUCCESSFULLY STARTED");
     }
 
     @Override
@@ -72,7 +72,7 @@ public final class StaffUtil extends JavaPlugin {
         this.file = null;
         this.dir = null;
         if (jda != null) jda.shutdownNow();
-        Bukkit.getServer().getLogger().severe("[STAFFUTILS] SUCCESSFULLY STOPPED");
+        Bukkit.getServer().getLogger().info("[SeaCraft STAFFUTILS] SUCCESSFULLY STOPPED");
     }
 
 
