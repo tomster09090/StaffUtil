@@ -5,33 +5,19 @@ import me.tomster09090.staffutil.commands.chatfunctions.chatfilter.asyncPlayerCh
 import me.tomster09090.staffutil.commands.chatfunctions.chatfilter.chatFilterCommand;
 import me.tomster09090.staffutil.commands.chatfunctions.clearChat;
 import me.tomster09090.staffutil.commands.chatfunctions.managementChatCommand;
-import me.tomster09090.staffutil.commands.chatfunctions.reportPlayer;
 import me.tomster09090.staffutil.commands.nvCommand;
 import me.tomster09090.staffutil.commands.reloadCommand;
 import me.tomster09090.staffutil.commands.rsp.onPackLoad;
-import me.tomster09090.staffutil.commands.rsp.resourcePackCommand;
 import me.tomster09090.staffutil.commands.chatfunctions.staffChatCommand;
-import me.tomster09090.staffutil.listeners.DiscordListener;
-import net.dv8tion.jda.api.JDA;
-import net.dv8tion.jda.api.JDABuilder;
-import net.dv8tion.jda.api.OnlineStatus;
-import net.dv8tion.jda.api.entities.Activity;
 import org.bukkit.Bukkit;
-import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.event.Listener;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import javax.security.auth.login.LoginException;
 import java.io.File;
-import java.io.IOException;
-import java.util.Objects;
 
 public final class StaffUtil extends JavaPlugin {
-
-  //  public File file = new File(getDataFolder(), "/logs/log.txt");
+    // public File file = new File(getDataFolder(), "/logs/log.txt");
    // public File dir = new File(getDataFolder(), "logs");
     public File customConfigFile;
     public FileConfiguration customConfig;
