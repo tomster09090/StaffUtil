@@ -31,13 +31,10 @@ import java.util.Objects;
 
 public final class StaffUtil extends JavaPlugin {
 
-    public File file = new File(getDataFolder(), "/logs/log.txt");
-    public File dir = new File(getDataFolder(), "logs");
+  //  public File file = new File(getDataFolder(), "/logs/log.txt");
+   // public File dir = new File(getDataFolder(), "logs");
     public File customConfigFile;
     public FileConfiguration customConfig;
-
-    public JDABuilder builder = JDABuilder.createDefault(this.getConfig().getString("bot-token"));
-    private JDA jda;
 
     public FileConfiguration getCustomConfig() {
         return this.customConfig;
@@ -46,40 +43,37 @@ public final class StaffUtil extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        startBot();
-        createCustomConfig();
+        //createCustomConfig();
         getConfig().options().copyDefaults();
         saveDefaultConfig();
-        logger();
+       // logger();
         getCommand("clearchat").setExecutor(new clearChat(this));
-        getCommand("rsp").setExecutor(new resourcePackCommand(this));
+       //getCommand("rsp").setExecutor(new resourcePackCommand(this));
         getCommand("nightvision").setExecutor(new nvCommand());
         Bukkit.getPluginManager().registerEvents(new onPackLoad(this), this);
-        Bukkit.getPluginManager().registerEvents(new DiscordListener(this), this);
         Bukkit.getPluginManager().registerEvents(new asyncChatCooldownListener(this), this);
         getCommand("cf").setExecutor(new chatFilterCommand(this));
-        Objects.requireNonNull(getCommand("sc")).setExecutor(new staffChatCommand(this));
+        (getCommand("sc")).setExecutor(new staffChatCommand(this));
         getCommand("sreload").setExecutor(new reloadCommand(this));
-        getCommand("report").setExecutor(new reportPlayer() );
         getCommand("mc").setExecutor(new managementChatCommand(this));
-        Bukkit.getPluginManager().registerEvents((Listener)new asyncPlayerChatEvent(this), this);
+        Bukkit.getPluginManager().registerEvents((Listener) new asyncPlayerChatEvent(this), this);
         Bukkit.getServer().getLogger().info("[SeaCraft STAFFUTILS] SUCCESSFULLY STARTED");
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        this.file = null;
-        this.dir = null;
-        if (jda != null) jda.shutdownNow();
+     //   this.file = null;
+     //   this.dir = null;
         Bukkit.getServer().getLogger().info("[SeaCraft STAFFUTILS] SUCCESSFULLY STOPPED");
     }
 
 
     public void fileConfig() {
 
-            }
-    private void createCustomConfig() {
+    }
+
+ /*   private void createCustomConfig() {
         customConfigFile = new File(getDataFolder(), "blocked-keywords.yml");
         if (!customConfigFile.exists()) {
             customConfigFile.getParentFile().mkdirs();
@@ -93,31 +87,18 @@ public final class StaffUtil extends JavaPlugin {
             e.printStackTrace();
         }
     }
-    public void logger() {
+  */
+
+/*    public void logger() {
         if (getCustomConfig().getBoolean("write-to-log")) {
             if (!this.dir.exists())
                 this.dir.mkdirs();
             if (!this.file.exists())
                 try {
                     this.file.createNewFile();
-                } catch (IOException iOException) {}
+                } catch (IOException iOException) {
+                }
         }
     }
-    public void startBot(){
-
-        //GRABS BOT TOKEN FROM CONFIG.YML
-        try{
-            JDABuilder builder = JDABuilder.createDefault(this.getConfig().getString("bot-token"));
-            builder.setActivity(Activity.playing(getConfig().getString("bot-activity")));
-            builder.setStatus(OnlineStatus.DO_NOT_DISTURB);
-            builder.addEventListeners(new DiscordListener(this));
-            try {
-                jda = builder.build();
-            }catch (LoginException e){
-                e.printStackTrace();
-            }
-        }catch (Exception e){}
-    }
-
-    public JDA getJda() { return jda; }
+ */
 }
