@@ -5,35 +5,35 @@ api-version: 1.18
 authors: [ tomster09090 ]
 description: Staff Utilities - Options such as staff chats, chat cooldown, clearchat and much more!
 commands:
-  sc:
-    aliases:
-      - staffchat
-    permission: staff.sc
+ # sc:
+ #   aliases:
+ #     - staffchat
+ #   permission: staff.sc
   sreload:
     description: reloads the StaffUtils Config.
-  mc:
-    aliases:
-      - managementchat
-    description: Chat for management members.
-  cf:
-    aliases:
-      - chatfilter
-    description: Chat Filter Command.
-    permission: staff.cf.command
-  rsp:
-    aliases:
-      - resourcepack
-      - rpack
-  clearchat:
-    aliases:
-      - cc
-      - clearc
-      - cchat
-    description: Clears the chat for all players online. Very useful staff moderation tool!
-    permission: staff.cc
-  report:
-    description: Gives you the ability to report another player.
-    permission: staff.report
+ # mc:
+ #   aliases:
+ #     - managementchat
+ #   description: Chat for management members.
+ # cf:
+ #   aliases:
+ #     - chatfilter
+ #   description: Chat Filter Command.
+ #   permission: staff.cf.command
+ # rsp:
+ #   aliases:
+ #     - resourcepack
+ #     - rpack
+ # clearchat:
+ #   aliases:
+ #     - cc
+ #     - clearc
+ #     - cchat
+ #   description: Clears the chat for all players online. Very useful staff moderation tool!
+ #   permission: staff.cc
+ # report:
+ #   description: Gives you the ability to report another player.
+ #   permission: staff.report
   nightvision:
     aliases:
       - nv
@@ -42,17 +42,17 @@ commands:
 permissions:
   staff.*:
     children:
-      staff.sc: true
-      staff.mc: true
-      staff.cf.command: true
-      staff.cf.bypass: true
-      staff.cf.blocked-word: true
-      staff.cc: true
-      staff.cc.bypass: true
-      staff.report: true
-      staff.report.read: true
+    #  staff.sc: true
+    #  staff.mc: true
+    #  staff.cf.command: true
+    #  staff.cf.bypass: true
+    #  staff.cf.blocked-word: true
+    #  staff.cc: true
+    #  staff.cc.bypass: true
+    #  staff.report: true
+    #  staff.report.read: true
       staff.reload: true
-      staff.cooldown.bypass: true
+    #  staff.cooldown.bypass: true
       staff.nv: true
     description: Permission node for all array of commands within the plugin.
     default: op

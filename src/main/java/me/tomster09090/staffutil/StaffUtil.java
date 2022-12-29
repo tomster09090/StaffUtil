@@ -33,16 +33,16 @@ public final class StaffUtil extends JavaPlugin {
         getConfig().options().copyDefaults();
         saveDefaultConfig();
        // logger();
-        getCommand("clearchat").setExecutor(new clearChat(this));
+        //getCommand("clearchat").setExecutor(new clearChat(this));
        //getCommand("rsp").setExecutor(new resourcePackCommand(this));
         getCommand("nightvision").setExecutor(new nvCommand());
         Bukkit.getPluginManager().registerEvents(new onPackLoad(this), this);
-        Bukkit.getPluginManager().registerEvents(new asyncChatCooldownListener(this), this);
-        getCommand("cf").setExecutor(new chatFilterCommand(this));
-        (getCommand("sc")).setExecutor(new staffChatCommand(this));
+        //Bukkit.getPluginManager().registerEvents(new asyncChatCooldownListener(this), this);
+        //getCommand("cf").setExecutor(new chatFilterCommand(this));
+        //(getCommand("sc")).setExecutor(new staffChatCommand(this));
         getCommand("sreload").setExecutor(new reloadCommand(this));
-        getCommand("mc").setExecutor(new managementChatCommand(this));
-        Bukkit.getPluginManager().registerEvents((Listener) new asyncPlayerChatEvent(this), this);
+        //getCommand("mc").setExecutor(new managementChatCommand(this));
+        //Bukkit.getPluginManager().registerEvents((Listener) new asyncPlayerChatEvent(this), this);
         Bukkit.getServer().getLogger().info("[SeaCraft STAFFUTILS] SUCCESSFULLY STARTED");
     }
 
@@ -52,11 +52,6 @@ public final class StaffUtil extends JavaPlugin {
      //   this.file = null;
      //   this.dir = null;
         Bukkit.getServer().getLogger().info("[SeaCraft STAFFUTILS] SUCCESSFULLY STOPPED");
-    }
-
-
-    public void fileConfig() {
-
     }
 
  /*   private void createCustomConfig() {

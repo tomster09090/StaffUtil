@@ -38,13 +38,13 @@ public class asyncPlayerChatEvent implements Listener {
         List<String> blockedWords = main.getCustomConfig().getStringList("blocked-keywords");
         for (String word : blockedWords) {
             if (message.contains(word)) {
-                if (main.getCustomConfig().getBoolean("write-to-log")) ;
+                /*if (main.getCustomConfig().getBoolean("write-to-log")) ;
                 try {
                     BufferedWriter bw = new BufferedWriter(new FileWriter(this.main.file, true));
                     bw.append("[").append((new SimpleDateFormat("dd-MM-yyyy HH:mm:ss")).format(new Date())).append("] ").append(e.getPlayer().getName()).append(": ").append(e.getMessage()).append("\n");
                     bw.close();
                 } catch (Exception ex) {
-                }
+                }*/
                 for (Player players : Bukkit.getOnlinePlayers()) {
                     e.setCancelled(true);
                     if (players.hasPermission("staff.cf.blocked-word")) {
